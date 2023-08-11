@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div>
-      <header className={`flex flex-col items-center`}>
+    <div className="p-2">
+      <header className={`text-center flex flex-col items-center`}>
         <h1 className="text-5xl p-6 pt-10">Alan Fang</h1>
         <p className="text-lg">
           Full stack engineer. CNCF tech follower. AI/LLM tech follower.
@@ -28,8 +28,8 @@ export default function Home() {
         </p>
       </header>
 
-      <main className="w-full flex flex-col items-center text-lg pb-10">
-        <div className="w-7/12 mt-20 border-black border-2">
+      <main className="flex flex-col items-center text-lg pb-10">
+        <div className="w-full lg:w-10/12 mt-20 border-black border-2">
           <h2 className="text-4xl p-6 pb-4">Experience</h2>
           <div className="pl-6">
             <a href="https://www.tesla.cn" target="__blank">
