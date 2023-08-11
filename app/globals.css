@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.noscrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(96 165 250);
+}
