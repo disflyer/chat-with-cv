@@ -45,12 +45,12 @@ export default function Home() {
     <div
       className={`flex h-screen flex-col items-center p-4 py-10 lg:p-24 ${silkscreen.className}`}
     >
-      <h1 className="text-2xl md:text-5xl mb-4">
+      <h1 className="text-2xl md:text-5xl mb-4 lg:mb-10">
         HELLO, THIS IS <a href="/profile">ALAN</a>
       </h1>
       <div
         ref={warpperRef}
-        className="flex-1 border-black border-2 m-0 md:m-10 h-3/6 overflow-y-scroll noscrollbar"
+        className="flex-1 border-black border-2 h-3/6 overflow-y-scroll noscrollbar md:w-10/12 lg:w-8/12"
         onScroll={handleScroll}
       >
         <div>
@@ -68,7 +68,7 @@ export default function Home() {
           <div ref={messagesEndRef}></div>
         </div>
       </div>
-      <div className="border border-black lg:w-6/12 w-full m-4 flex">
+      <div className="border w-full md:w-10/12 lg:w-8/12 border-black m-4 flex">
         <textarea
           ref={inputRef}
           onKeyDown={handleEnter}
