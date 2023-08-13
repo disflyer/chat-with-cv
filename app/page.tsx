@@ -20,7 +20,7 @@ const defaultMessage = [
   },
   {
     type: 'apiMessage',
-    message: `This bot will answer base on my vita. (e.g. what's your tech stacks?)`,
+    message: `This bot will answer base on my vita. (e.g. what's your familiar tech stack?)`,
   },
 ];
 const controller = new AbortController();
