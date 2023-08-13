@@ -34,3 +34,29 @@ a {
   text-decoration: underline;
   color: rgb(96 165 250);
 }
+
+.loading div {
+  width: 4px;
+  height: 4px;
+  margin: 2px;
+  background: #515151;
+  display: inline-block;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loading div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}

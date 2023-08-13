@@ -92,7 +92,7 @@ export default function Home() {
               <a href="https://www.shou.edu.cn" target="__blank">
                 Shanghai Ocean University
               </a>{' '}
-              Bachelor in Ocean Technology.
+              Bachelor of Ocean Technology.
             </li>
           </ul>
           <h2 className="text-4xl p-6 pb-5">Skills</h2>

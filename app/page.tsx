@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useAutoScroll } from '@/hooks/useAutoScroll';
 import { silkscreen } from '@/utils/font';
+import { Loading } from '@/components/Loading';
 
 const defaultMessage = [
   {
@@ -99,6 +100,11 @@ export default function Home() {
               </div>
             ),
           )}
+          {loading && (
+            <div className="p-3 text-left pr-20">
+              <Loading key="loading" />
+            </div>
+          )}
           <div ref={messagesEndRef}></div>
         </div>
       </div>
@@ -109,20 +115,27 @@ export default function Home() {
           maxLength={512}
           value={query}
           rows={1}
-          onChange={e => setQuery(e.target.value)}
+          onChange={e => {
+            if (loading) return null;
+            setQuery(e.target.value);
+          }}
           placeholder="Send a question you want to know about me."
           spellCheck={false}
           className="text-xs h-[60px] noscrollbar w-full resize-none bg-transparent px-4 py-[1.3rem] focus-within:outline-none sm:text-sm"
         />
-        <div className="flex items-center">
-          <Image
-            src="/send.svg"
-            width={28}
-            height={28}
-            onClick={handleEnter}
-            alt="send icon"
-            className="mr-3 hover:bg-slate-500"
-          />
+        <div className="flex items-center justify-end mr-3 w-[60px]">
+          {loading ? (
+            <Loading key="loading" />
+          ) : (
+            <Image
+              src="/send.svg"
+              width={28}
+              height={28}
+              onClick={handleEnter}
+              alt="send icon"
+              className="hover:bg-slate-500"
+            />
+          )}
         </div>
       </div>
       <footer className="text-slate-400 absolute bottom-5 text-center w-full">
