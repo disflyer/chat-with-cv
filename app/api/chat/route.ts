@@ -3,7 +3,7 @@ import { OpenAI } from 'langchain/llms/openai';
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { initPinecone } from '@/utils/pinecone';
 
 const limiter = rateLimit({
@@ -19,7 +19,7 @@ Question: {question}
 
 Helpful answer in markdown:`;
 
-export const POST = async (req: Request) => {
+export const POST = async (req: NextRequest) => {
   const headers = limiter.checkNext(req, 100);
   const { question } = await req.json();
   const pineconeIndex = await initPinecone();
