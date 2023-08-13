@@ -29,7 +29,7 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col items-center text-lg pb-10">
-        <div className="w-full lg:w-8/12 mt-20 border-black border-2">
+        <div className="w-full lg:w-8/12 mt-20 dark:border-white border-black border-2">
           <h2 className="text-4xl p-6 pb-4">Experience</h2>
           <div className="pl-6">
             <a href="https://www.tesla.cn" target="__blank">

@@ -85,7 +85,7 @@ export default function Home() {
       </h1>
       <div
         ref={warpperRef}
-        className="flex-1 border-black border-2 h-3/6 overflow-y-scroll noscrollbar md:w-10/12 lg:w-8/12"
+        className="flex-1 border-black dark:border-white border-2 h-3/6 overflow-y-scroll noscrollbar md:w-10/12 lg:w-8/12"
         onScroll={handleScroll}
       >
         <div>
@@ -108,7 +108,7 @@ export default function Home() {
           <div ref={messagesEndRef}></div>
         </div>
       </div>
-      <div className="border w-full md:w-10/12 lg:w-8/12 border-black m-4 flex">
+      <div className="border w-full dark:border-white md:w-10/12 lg:w-8/12 border-black m-4 flex">
         <textarea
           ref={inputRef}
           onKeyDown={handleEnter}
