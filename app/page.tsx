@@ -16,27 +16,61 @@ const defaultMessage = [
   },
   {
     type: 'apiMessage',
-    message:
-      "You can question me about my experience, to figure out if I'm suitable for your postion. ",
+    message: 'You can question me.',
   },
   {
     type: 'apiMessage',
-    message: `This bot will answer base on my vita. (e.g. what's your familiar tech stack?)`,
+    message: `This bot will answer base on my vita. (e.g. what's your tech stacks?)`,
   },
 ];
-
+const controller = new AbortController();
+const signal = controller.signal;
 export default function Home() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [messages, setMessages] = useState(defaultMessage);
   const [query, setQuery] = useState<string>();
+  const [loading, setLoading] = useState<boolean>(false);
   const { messagesEndRef, warpperRef, handleScroll } = useAutoScroll();
   useEffect(() => {
     inputRef.current?.focus();
+    return () => controller.abort();
   }, []);
-  const handleEnter = (e: any) => {
+  const handleRequest = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    if (!query) return null;
+    setLoading(true);
+    const question = query;
+    setQuery('');
+    setMessages(pre =>
+      pre.concat({
+        type: 'userMessage',
+        message: query!,
+      }),
+    );
+    let res;
+    try {
+      res = await fetch('/api/chat', {
+        method: 'POST',
+        body: JSON.stringify({
+          question,
+        }),
+        signal,
+      });
+    } catch (error) {
+      return setLoading(false);
+    }
+    const { text } = await res.json();
+    setMessages(pre =>
+      pre.concat({
+        type: 'apiMessage',
+        message: text,
+      }),
+    );
+    setLoading(false);
+  };
+  const handleEnter = async (e: any) => {
     if (e.key === 'Enter' && query) {
-      e.preventDefault();
-      // handleSubmit(e)
+      handleRequest(e);
     } else if (e.key === 'Enter') {
       e.preventDefault();
     }
@@ -61,7 +95,7 @@ export default function Home() {
               </div>
             ) : (
               <div key={index} className="p-3 text-right pl-20">
-                Alan
+                {message.message}
               </div>
             ),
           )}
@@ -73,6 +107,7 @@ export default function Home() {
           ref={inputRef}
           onKeyDown={handleEnter}
           maxLength={512}
+          value={query}
           rows={1}
           onChange={e => setQuery(e.target.value)}
           placeholder="Send a question you want to know about me."
@@ -84,6 +119,7 @@ export default function Home() {
             src="/send.svg"
             width={28}
             height={28}
+            onClick={handleEnter}
             alt="send icon"
             className="mr-3 hover:bg-slate-500"
           />

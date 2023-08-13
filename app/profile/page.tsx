@@ -101,13 +101,9 @@ export default function Home() {
               Good skills in React, Nextjs, Nodejs, Python, Docker, K8S, Git,
               etc.
             </li>
-            <li>
-              Enjoy AI/LLM tech and open source community(langchain, flowise,
-              huggingface, etc.
-            </li>
-            <li>Team management and team building experience.</li>
+            <li>Learning AI/LLM tech(langchain, flowise, huggingface, etc.)</li>
+            <li>Small team management and team building experience.</li>
             <li>Greate passion for software technology and keep learning.</li>
-            <li>Great self-learning ability.</li>
           </ul>
           <h2 className="text-4xl p-6 pb-5">Awards</h2>
           <ul className="list-disc pl-14 pb-3">
