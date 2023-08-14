@@ -36,8 +36,8 @@ export default function Home() {
     inputRef.current?.focus();
     return () => controller.abort();
   }, []);
-  const handleRequest = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
+  const handleRequest = async (e?: { preventDefault: () => void }) => {
+    e?.preventDefault();
     if (!query) return null;
     setLoading(true);
     const question = query;
@@ -131,7 +131,7 @@ export default function Home() {
               src="/send.svg"
               width={28}
               height={28}
-              onClick={handleEnter}
+              onClick={handleRequest}
               alt="send icon"
               className="hover:bg-slate-500"
             />
