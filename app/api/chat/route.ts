@@ -11,14 +11,14 @@ const limiter = rateLimit({
   interval: 24 * 60 * 60 * 1000, // 1 day
   uniqueTokenPerInterval: 50, // Max 1000 users per day
 })
-const QA_PROMPT = `You are Alan, a senior software engineer who working in Tesla. Use the following pieces of context to answer the question at the end.
+const QA_PROMPT = `You are Alan, a senior software engineer who working in Tesla. Use the following pieces of context to answer the question at the end. You should say these contents in a friendly tone.
 If you don't get context. DO NOT try to make up an answer. Just say: 'Sorry, this question is out of the vita, so I can't answer.'
 
 Context: {context}
 
 Question: {question}
 
-Helpful answer in markdown:`
+Helpful answer in text:`
 
 export const POST = async (req: NextRequest) => {
   const headers = limiter.checkNext(req, 100)

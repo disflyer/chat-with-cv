@@ -20,7 +20,7 @@ export const GET = async () => {
   )
 
   const pineconeIndex = await initPinecone()
-  // await pineconeIndex.namespace(PINECONEINDEX_NS).deleteAll()
+  await pineconeIndex.namespace(PINECONEINDEX_NS).deleteAll()
   try {
     await PineconeStore.fromDocuments(profileDocs, embeddings, {
       pineconeIndex,

@@ -1,9 +1,9 @@
-'use client';
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import { useAutoScroll } from '@/hooks/useAutoScroll';
-import { silkscreen } from '@/utils/font';
-import { Loading } from '@/components/Loading';
+'use client'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
+import { useAutoScroll } from '@/hooks/useAutoScroll'
+import { silkscreen } from '@/utils/font'
+import { Loading } from '@/components/Loading'
 
 const defaultMessage = [
   {
@@ -12,43 +12,42 @@ const defaultMessage = [
   },
   {
     type: 'apiMessage',
-    message:
-      "I'm Alan, a software engineer. And I'm Seek for a remote fullstack/frontend job.",
+    message: "I'm Alan, a software engineer.",
   },
   {
     type: 'apiMessage',
-    message: 'You can question me.',
+    message: 'You can talk with me about my work or hobbies.',
   },
   {
     type: 'apiMessage',
     message: `This bot will answer base on my vita. (e.g. what's your familiar tech stack?)`,
   },
-];
-const controller = new AbortController();
-const signal = controller.signal;
+]
+const controller = new AbortController()
+const signal = controller.signal
 export default function Home() {
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-  const [messages, setMessages] = useState(defaultMessage);
-  const [query, setQuery] = useState<string>();
-  const [loading, setLoading] = useState<boolean>(false);
-  const { messagesEndRef, warpperRef, handleScroll } = useAutoScroll();
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  const [messages, setMessages] = useState(defaultMessage)
+  const [query, setQuery] = useState<string>()
+  const [loading, setLoading] = useState<boolean>(false)
+  const { messagesEndRef, warpperRef, handleScroll } = useAutoScroll()
   useEffect(() => {
-    inputRef.current?.focus();
-    return () => controller.abort();
-  }, []);
+    inputRef.current?.focus()
+    return () => controller.abort()
+  }, [])
   const handleRequest = async (e?: { preventDefault: () => void }) => {
-    e?.preventDefault();
-    if (!query) return null;
-    setLoading(true);
-    const question = query;
-    setQuery('');
-    setMessages(pre =>
+    e?.preventDefault()
+    if (!query) return null
+    setLoading(true)
+    const question = query
+    setQuery('')
+    setMessages((pre) =>
       pre.concat({
         type: 'userMessage',
         message: query!,
       }),
-    );
-    let res;
+    )
+    let res
     try {
       res = await fetch('/api/chat', {
         method: 'POST',
@@ -56,26 +55,26 @@ export default function Home() {
           question,
         }),
         signal,
-      });
+      })
     } catch (error) {
-      return setLoading(false);
+      return setLoading(false)
     }
-    const { text } = await res.json();
-    setMessages(pre =>
+    const { text } = await res.json()
+    setMessages((pre) =>
       pre.concat({
         type: 'apiMessage',
         message: text,
       }),
-    );
-    setLoading(false);
-  };
+    )
+    setLoading(false)
+  }
   const handleEnter = async (e: any) => {
     if (e.key === 'Enter' && query) {
-      handleRequest(e);
+      handleRequest(e)
     } else if (e.key === 'Enter') {
-      e.preventDefault();
+      e.preventDefault()
     }
-  };
+  }
   return (
     <div
       className={`flex h-screen flex-col items-center p-4 py-10 lg:p-24 ${silkscreen.className}`}
@@ -115,9 +114,9 @@ export default function Home() {
           maxLength={512}
           value={query}
           rows={1}
-          onChange={e => {
-            if (loading) return null;
-            setQuery(e.target.value);
+          onChange={(e) => {
+            if (loading) return null
+            setQuery(e.target.value)
           }}
           placeholder="Send a question you want to know about me."
           spellCheck={false}
@@ -142,5 +141,5 @@ export default function Home() {
         © Alan&apos;s website
       </footer>
     </div>
-  );
+  )
 }
