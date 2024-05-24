@@ -73,7 +73,7 @@ export default function Home() {
             <li>Core code writing, and do some communication work in the team.</li>
           </ul>
 
-          <h2 className="text-4xl p-6 pb-5">Projects</h2>
+          <h2 className="text-4xl p-6 pb-5">Company Projects</h2>
           <div>
             <div className="pl-6">
               <div className="font-semibold">Tesla AI chatbot</div>
@@ -155,7 +155,7 @@ export default function Home() {
           </div>
           <div>
             <div className="pl-6">
-              <div className="font-semibold">Xiaoyuzhou Podcaster Platform</div>
+              <a href="https://podcaster.xiaoyuzhoufm.com/" target="_blank" rel="noopener noreferrer"><div className="font-semibold">Xiaoyuzhou Podcaster Platform</div></a>
             </div>
             <div className="pl-14 pb-3 [&>p]:py-1">
               <p>
@@ -187,6 +187,35 @@ export default function Home() {
                 The Xiaoyuzhou Podcaster Platform has Improved podcast management experience by
                 providing podcasters with an intuitive and efficient platform to manage their
                 content and analyze their audience engagement effectively.
+              </div>
+            </div>
+          </div>
+          <h2 className="text-4xl p-6 pb-5">Side Projects</h2>
+          <div>
+            <div className="pl-6">
+              <a href="https://chunks-english.vercel.app" target="_blank" rel="noopener noreferrer"><div className="font-semibold">Learning English by Chunks</div></a>
+            </div>
+            <div className="pl-14 pb-3 [&>p]:py-1">
+              <p>
+                This project is a English learning website, I build it because I find all English learning application is focus on vocabulary. But we could't know how to use those vocabulary in daily communication.
+                I thought if we can learn English by chunks, we would deal better in spoken English.
+              </p>
+              <div>
+                This project use a very short time to build, and still in progress. I would add some AI ability on it, to help Pro user build their chunks by just one vocabulary.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="pl-6">
+              <a href="/" target="_blank" rel="noopener noreferrer"><div className="font-semibold">Chat with CV</div></a>
+            </div>
+            <div className="pl-14 pb-3 [&>p]:py-1">
+              <p>
+                This project providing AI chat services base on my cv, answering
+                questions about me. Use Openai to embedding and chat. Use Pinecone to store vector data.
+              </p>
+              <div>
+                This project just develop to show more information about me.
               </div>
             </div>
           </div>
