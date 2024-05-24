@@ -197,7 +197,7 @@ export default function Home() {
             </div>
             <div className="pl-14 pb-3 [&>p]:py-1">
               <p>
-                This project is a English learning website, I build it because I find all English learning application is focus on vocabulary. But we could't know how to use those vocabulary in daily communication.
+                This project is a English learning website, I build it because I find all English learning application is focus on vocabulary. But we could not know how to use those vocabulary in daily communication.
                 I thought if we can learn English by chunks, we would deal better in spoken English.
               </p>
               <div>
