@@ -27,7 +27,7 @@ export default function Home() {
           <h2 className="text-4xl p-6 pb-4">Experience</h2>
           <div className="pl-6">
             <a href="https://www.tesla.cn" target="__blank">
-              Tesla (Shanghai) Co.,Ltd.
+              Tesla (Shanghai) Co.,Ltd.(2021.11-2024.5)
             </a>
             <div>Senior Software Engineer</div>
           </div>
@@ -46,7 +46,7 @@ export default function Home() {
           </ul>
           <div className="pl-6">
             <a href="https://okjike.com" target="__blank">
-              Shanghai Ruoyou Internet Technology Co., Ltd.
+              Shanghai Ruoyou Internet Technology Co., Ltd.(2019.6-2021.11).
             </a>
             <div>Frontend Engineer</div>
           </div>
@@ -62,7 +62,7 @@ export default function Home() {
             <li>Develop some management projects using React.</li>
           </ul>
           <div className="pl-6">
-            <a href="">Shanghai Qing Qing Technology Co., Ltd.(online education)</a>
+            <a href="">Shanghai Qing Qing Technology Co., Ltd.(2017.10-2019.4)</a>
             <div>Frontend Engineer</div>
           </div>
           <ul className="list-disc pl-14 pb-3">
