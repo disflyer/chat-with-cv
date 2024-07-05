@@ -32,11 +32,11 @@ export default function Home() {
             <div>Senior Software Engineer</div>
           </div>
           <ul className="list-disc pl-14 pb-3">
-            <li>Build Tesla AI Chatbot base on AI/LLM.</li>
             <li>
               Build Customer Data Platform.(A platform to search&use Tesla customer&apos;s data
               efficiently)
             </li>
+            <li>Build Tesla AI Chatbot base on AI/LLM.</li>
             <li>
               Full-stack development of Tesla Computer Vision project(A project serving Tesla Super
               Factory).
@@ -74,42 +74,6 @@ export default function Home() {
           </ul>
 
           <h2 className="text-4xl p-6 pb-5">Company Projects</h2>
-          <div>
-            <div className="pl-6">
-              <div className="font-semibold">Tesla AI chatbot</div>
-            </div>
-            <div className="pl-14 pb-3 [&>p]:py-1">
-              <p>
-                Chatbot project providing AI chat services for Tesla customers, answering
-                sales-related questions before users decide to buy a Tesla car, and handling
-                after-sales issues for customers.
-              </p>
-              <p>Responsibilities:</p>
-              <ul className="list-disc pl-14 pb-3">
-                <li>Implementing algorithm model service using Nvidia Triton Server</li>
-                <li>Implementing streamlined model training pipelines.</li>
-                <li>Implementing vector database management development</li>
-                <li>performance, stability, and scalability</li>
-                <li>Ensure optimal performance, stability, and scalability.</li>
-                <li>
-                  Collaborating closely with backend teams proficient in Go, Java, and Python
-                  languages to develop and integrate multiple microservic.
-                </li>
-              </ul>
-              <p>Technologies:</p>
-              <ul className="list-disc pl-14 pb-3">
-                <li>Frontend: Next.js, Antd, Tailwind, Trpc, Prisma</li>
-                <li>Backend: Python(FastAPI), Java(Spring Boot), Apisix</li>
-                <li>Datasource: Milvus, PostgreSQL, Kafka, S3</li>
-                <li>Log&Analysis: Grafana, Prometheus, Splunk</li>
-                <li>DevOps: Docker, Kubernetes, Helm, Jenkins</li>
-                <li>Version Control: Git, GitHub</li>
-              </ul>
-              <div>
-                This project improves customer experience and reduce customer service workload.
-              </div>
-            </div>
-          </div>
           <div>
             <div className="pl-6">
               <div className="font-semibold">Tesla Customer Data Platform</div>
@@ -150,6 +114,42 @@ export default function Home() {
                 This project improved data visibility, enabling data-driven decision-making and
                 personalized customer experiences. It played a pivotal role in optimizing marketing
                 campaigns, improving customer support, and driving business growth.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="pl-6">
+              <div className="font-semibold">Tesla AI chatbot</div>
+            </div>
+            <div className="pl-14 pb-3 [&>p]:py-1">
+              <p>
+                Chatbot project providing AI chat services for Tesla customers, answering
+                sales-related questions before users decide to buy a Tesla car, and handling
+                after-sales issues for customers.
+              </p>
+              <p>Responsibilities:</p>
+              <ul className="list-disc pl-14 pb-3">
+                <li>Implementing algorithm model service using Nvidia Triton Server</li>
+                <li>Implementing streamlined model training pipelines.</li>
+                <li>Implementing vector database management development</li>
+                <li>performance, stability, and scalability</li>
+                <li>Ensure optimal performance, stability, and scalability.</li>
+                <li>
+                  Collaborating closely with backend teams proficient in Go, Java, and Python
+                  languages to develop and integrate multiple microservic.
+                </li>
+              </ul>
+              <p>Technologies:</p>
+              <ul className="list-disc pl-14 pb-3">
+                <li>Frontend: Next.js, Antd, Tailwind, Trpc, Prisma</li>
+                <li>Backend: Python(FastAPI), Java(Spring Boot), Apisix</li>
+                <li>Datasource: Milvus, PostgreSQL, Kafka, S3</li>
+                <li>Log&Analysis: Grafana, Prometheus, Splunk</li>
+                <li>DevOps: Docker, Kubernetes, Helm, Jenkins</li>
+                <li>Version Control: Git, GitHub</li>
+              </ul>
+              <div>
+                This project improves customer experience and reduce customer service workload.
               </div>
             </div>
           </div>
