@@ -13,7 +13,11 @@ export default function Home() {
           <a href="mailto:disflyer123@gmail.com" className="pr-5">
             Email
           </a>
-          <a href="https://github.com/disflyer" target="__blank" className="pr-5">
+          <a
+            href="https://github.com/disflyer"
+            target="__blank"
+            className="pr-5"
+          >
             Github
           </a>
           <a href="https://twitter.com/disflyer" target="__blank">
@@ -26,6 +30,21 @@ export default function Home() {
         <div className="w-full lg:w-8/12 mt-20 dark:border-white border-black border-2 pr-5">
           <h2 className="text-4xl p-6 pb-4">Experience</h2>
           <div className="pl-6">
+            <a href="https://desktop.youchuanai.com" target="__blank">
+              Midjourney (China Team) Co.,Ltd.(2024.08)
+            </a>
+            <div>Senior Software Engineer</div>
+          </div>
+          <ul className="list-disc pl-14 pb-3">
+            <li>
+              Build Midjourney Chinese prodcut, a text-to-image desktop
+              application for designer.
+            </li>
+            <li>migration core service from TCould to AliCloud.</li>
+            <li>Do some other infra and CI/CD work for team.</li>
+            {/* <li>Got promotion and annual awards.</li> */}
+          </ul>
+          <div className="pl-6">
             <a href="https://www.tesla.cn" target="__blank">
               Tesla (Shanghai) Co.,Ltd.(2021.11-2024.5)
             </a>
@@ -33,13 +52,13 @@ export default function Home() {
           </div>
           <ul className="list-disc pl-14 pb-3">
             <li>
-              Build Customer Data Platform.(A platform to search&use Tesla customer&apos;s data
-              efficiently)
+              Build Customer Data Platform.(A platform to search&use Tesla
+              customer&apos;s data efficiently)
             </li>
             <li>Build Tesla AI Chatbot base on AI/LLM.</li>
             <li>
-              Full-stack development of Tesla Computer Vision project(A project serving Tesla Super
-              Factory).
+              Full-stack development of Tesla Computer Vision project(A project
+              serving Tesla Super Factory).
             </li>
             <li>Do some infra and CI/CD work for team.</li>
             {/* <li>Got promotion and annual awards.</li> */}
@@ -52,25 +71,31 @@ export default function Home() {
           </div>
           <ul className="list-disc pl-14 pb-3">
             <li>
-              Frontend develop of{' '}
+              Frontend develop of{" "}
               <a href="https://podcaster.xiaoyuzhoufm.com/" target="__black">
                 Xiaoyuzhou FM
               </a>
               . A Mangement Platform for podcaster.
             </li>
-            <li>Develop for various Middle Platforms, mini-application, and so on.</li>
+            <li>
+              Develop for various Middle Platforms, mini-application, and so on.
+            </li>
             <li>Develop some management projects using React.</li>
           </ul>
           <div className="pl-6">
-            <a href="">Shanghai Qing Qing Technology Co., Ltd.(2017.10-2019.4)</a>
+            <a href="">
+              Shanghai Qing Qing Technology Co., Ltd.(2017.10-2019.4)
+            </a>
             <div>Frontend Engineer</div>
           </div>
           <ul className="list-disc pl-14 pb-3">
             <li>
-              Participated in the research and development of an online 1-to-1 education hybrid on
-              PC and iPad.
+              Participated in the research and development of an online 1-to-1
+              education hybrid on PC and iPad.
             </li>
-            <li>Core code writing, and do some communication work in the team.</li>
+            <li>
+              Core code writing, and do some communication work in the team.
+            </li>
           </ul>
 
           <h2 className="text-4xl p-6 pb-5">Company Projects</h2>
@@ -80,25 +105,31 @@ export default function Home() {
             </div>
             <div className="pl-14 pb-3 [&>p]:py-1">
               <p>
-                The Tesla Customer Data Platform project was aimed at centralizing and harnessing
-                customer data to enhance customer relationship management and business operations.
+                The Tesla Customer Data Platform project was aimed at
+                centralizing and harnessing customer data to enhance customer
+                relationship management and business operations.
               </p>
               <p>Responsibilities:</p>
               <ul className="list-disc pl-14 pb-3">
-                <li>Implementing User Label Management Services development.</li>
-                <li>Develop some frontend components for analysis requirements</li>
                 <li>
-                  Implementing role-based access control (RBAC) and data encryption to ensure data
-                  security requirements.
+                  Implementing User Label Management Services development.
                 </li>
                 <li>
-                  Creating APIs and interfaces for seamless integration with internal systems and
-                  third-party applications by OData.
+                  Develop some frontend components for analysis requirements
                 </li>
                 <li>
-                  Collaborating with cross-functional teams, including data scientists, engineers,
-                  and business stakeholders, to define requirements and deliver solutions that meet
-                  business objectives.
+                  Implementing role-based access control (RBAC) and data
+                  encryption to ensure data security requirements.
+                </li>
+                <li>
+                  Creating APIs and interfaces for seamless integration with
+                  internal systems and third-party applications by OData.
+                </li>
+                <li>
+                  Collaborating with cross-functional teams, including data
+                  scientists, engineers, and business stakeholders, to define
+                  requirements and deliver solutions that meet business
+                  objectives.
                 </li>
               </ul>
               <p>Technologies:</p>
@@ -111,9 +142,10 @@ export default function Home() {
                 <li>Version Control: Git, GitHub</li>
               </ul>
               <div>
-                This project improved data visibility, enabling data-driven decision-making and
-                personalized customer experiences. It played a pivotal role in optimizing marketing
-                campaigns, improving customer support, and driving business growth.
+                This project improved data visibility, enabling data-driven
+                decision-making and personalized customer experiences. It played
+                a pivotal role in optimizing marketing campaigns, improving
+                customer support, and driving business growth.
               </div>
             </div>
           </div>
@@ -123,20 +155,24 @@ export default function Home() {
             </div>
             <div className="pl-14 pb-3 [&>p]:py-1">
               <p>
-                Chatbot project providing AI chat services for Tesla customers, answering
-                sales-related questions before users decide to buy a Tesla car, and handling
-                after-sales issues for customers.
+                Chatbot project providing AI chat services for Tesla customers,
+                answering sales-related questions before users decide to buy a
+                Tesla car, and handling after-sales issues for customers.
               </p>
               <p>Responsibilities:</p>
               <ul className="list-disc pl-14 pb-3">
-                <li>Implementing algorithm model service using Nvidia Triton Server</li>
+                <li>
+                  Implementing algorithm model service using Nvidia Triton
+                  Server
+                </li>
                 <li>Implementing streamlined model training pipelines.</li>
                 <li>Implementing vector database management development</li>
                 <li>performance, stability, and scalability</li>
                 <li>Ensure optimal performance, stability, and scalability.</li>
                 <li>
-                  Collaborating closely with backend teams proficient in Go, Java, and Python
-                  languages to develop and integrate multiple microservic.
+                  Collaborating closely with backend teams proficient in Go,
+                  Java, and Python languages to develop and integrate multiple
+                  microservic.
                 </li>
               </ul>
               <p>Technologies:</p>
@@ -149,30 +185,41 @@ export default function Home() {
                 <li>Version Control: Git, GitHub</li>
               </ul>
               <div>
-                This project improves customer experience and reduce customer service workload.
+                This project improves customer experience and reduce customer
+                service workload.
               </div>
             </div>
           </div>
           <div>
             <div className="pl-6">
-              <a href="https://podcaster.xiaoyuzhoufm.com/" target="_blank" rel="noopener noreferrer"><div className="font-semibold">Xiaoyuzhou Podcaster Platform</div></a>
+              <a
+                href="https://podcaster.xiaoyuzhoufm.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="font-semibold">
+                  Xiaoyuzhou Podcaster Platform
+                </div>
+              </a>
             </div>
             <div className="pl-14 pb-3 [&>p]:py-1">
               <p>
-                Xiaoyuzhou Podcaster Platform offers comprehensive podcast management services to
-                podcasters, facilitating seamless handling of various tasks. This includes podcast
-                audio file uploading, asynchronous RSS feed management, podcast preview
+                Xiaoyuzhou Podcaster Platform offers comprehensive podcast
+                management services to podcasters, facilitating seamless
+                handling of various tasks. This includes podcast audio file
+                uploading, asynchronous RSS feed management, podcast preview
                 capabilities, and insightful podcast data analysis.
               </p>
               <p>Responsibilities:</p>
               <ul className="list-disc pl-14 pb-3">
                 <li>
-                  Implementing a user-friendly frontend interface using Next.js to enhance user
-                  experience and accessibility.
+                  Implementing a user-friendly frontend interface using Next.js
+                  to enhance user experience and accessibility.
                 </li>
                 <li>
-                  Integrating Google Analytics for in-depth analysis of website metrics, enabling
-                  valuable insights into user behavior and platform performance.
+                  Integrating Google Analytics for in-depth analysis of website
+                  metrics, enabling valuable insights into user behavior and
+                  platform performance.
                 </li>
               </ul>
               <p>Technologies:</p>
@@ -184,35 +231,50 @@ export default function Home() {
                 <li>Version Control: Git, GitHub</li>
               </ul>
               <div>
-                The Xiaoyuzhou Podcaster Platform has Improved podcast management experience by
-                providing podcasters with an intuitive and efficient platform to manage their
-                content and analyze their audience engagement effectively.
+                The Xiaoyuzhou Podcaster Platform has Improved podcast
+                management experience by providing podcasters with an intuitive
+                and efficient platform to manage their content and analyze their
+                audience engagement effectively.
               </div>
             </div>
           </div>
           <h2 className="text-4xl p-6 pb-5">Side Projects</h2>
           <div>
             <div className="pl-6">
-              <a href="https://chunks-english.vercel.app" target="_blank" rel="noopener noreferrer"><div className="font-semibold">Learning English by Chunks</div></a>
+              <a
+                href="https://chunks-english.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="font-semibold">Learning English by Chunks</div>
+              </a>
             </div>
             <div className="pl-14 pb-3 [&>p]:py-1">
               <p>
-                This project is a English learning website, I build it because I find all English learning application is focus on vocabulary. But we could not know how to use those vocabulary in daily communication.
-                I thought if we can learn English by chunks, we would deal better in spoken English.
+                This project is a English learning website, I build it because I
+                find all English learning application is focus on vocabulary.
+                But we could not know how to use those vocabulary in daily
+                communication. I thought if we can learn English by chunks, we
+                would deal better in spoken English.
               </p>
               <div>
-                This project use a very short time to build, and still in progress. I would add some AI ability on it, to help Pro user build their chunks by just one vocabulary.
+                This project use a very short time to build, and still in
+                progress. I would add some AI ability on it, to help Pro user
+                build their chunks by just one vocabulary.
               </div>
             </div>
           </div>
           <div>
             <div className="pl-6">
-              <a href="/" target="_blank" rel="noopener noreferrer"><div className="font-semibold">Chat with CV</div></a>
+              <a href="/" target="_blank" rel="noopener noreferrer">
+                <div className="font-semibold">Chat with CV</div>
+              </a>
             </div>
             <div className="pl-14 pb-3 [&>p]:py-1">
               <p>
                 This project providing AI chat services base on my cv, answering
-                questions about me. Use Openai to embedding and chat. Use Pinecone to store vector data.
+                questions about me. Use Openai to embedding and chat. Use
+                Pinecone to store vector data.
               </p>
               <div>
                 This project just develop to show more information about me.
@@ -221,7 +283,9 @@ export default function Home() {
           </div>
           <h2 className="text-4xl p-6 pb-5">Skills</h2>
           <ul className="list-disc pl-14 pb-3">
-            <li>Good skills in React, Nextjs, Nodejs, Python, K8S, Git, etc.</li>
+            <li>
+              Good skills in React, Nextjs, Nodejs, Python, K8S, Git, etc.
+            </li>
             <li>Learning AI/LLM tech(langchain, triton, huggingface, etc.)</li>
             <li>Learning Web3 tech(Blockchain, ETH, Solidity, etc.)</li>
           </ul>
@@ -233,7 +297,7 @@ export default function Home() {
                 target="__blank"
               >
                 Shanghai Ocean University
-              </a>{' '}
+              </a>{" "}
               (2013-2017) Bachelor.
             </li>
           </ul>
@@ -244,7 +308,9 @@ export default function Home() {
           </ul>
         </div>
       </main>
-      <footer className="text-slate-400 p-5 text-center w-full">© Alan&apos;s website</footer>
+      <footer className="text-slate-400 p-5 text-center w-full">
+        © Alan&apos;s website
+      </footer>
     </div>
-  )
+  );
 }
