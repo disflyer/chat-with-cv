@@ -61,6 +61,7 @@ const experiences = [
       "Build Tesla AI Chatbot based on AI/LLM.",
       "Full-stack development of Tesla Computer Vision project (A project serving Tesla Super Factory).",
       "Infrastructure and CI/CD work for the team.",
+      "Promoted within the first year at Tesla.",
     ],
   },
   {
@@ -85,6 +86,25 @@ const experiences = [
 ];
 const projects = [
   {
+    name: "AI Restaurant Reservation (Founder Project)",
+    desc: "A personal startup project leveraging AI to help users reserve restaurants in Japan, even if they don't speak Japanese. The app integrates voice, text, and multi-platform data to automate restaurant booking, support cross-language communication, and streamline the reservation process for both users and restaurants.",
+    responsibilities: [
+      "Designed and developed the full-stack AI-powered restaurant reservation app.",
+      "Implemented cross-language (Chinese/Japanese) voice and text interaction.",
+      "Integrated Apple Map and other third-party APIs for restaurant data and navigation.",
+      "Automated reservation confirmation and communication with restaurants.",
+    ],
+    tech: [
+      "AI Voice",
+      "LLM",
+      "Flutter",
+      "Node.js",
+      "Apple Map API",
+      "Cloud Services",
+    ],
+    images: ["/app_home.jpg", "/app_reservation.jpg"],
+  },
+  {
     name: "Crimson AI Agent",
     desc: "An AI Agent project designed for all Crimson consultants and users. It integrates data from multiple platforms (Slack, email, message, website, Zoom meeting, etc.) to address key challenges in the education consulting industry, such as efficient information synchronization, automated consulting report generation, and personalized student study-abroad planning.",
     responsibilities: [
@@ -95,7 +115,7 @@ const projects = [
     ],
     tech: [
       "AI Agent",
-      "NLP",
+      "LLM",
       "Slack API",
       "Email Integration",
       "Web Crawling",
@@ -199,10 +219,6 @@ const education = [
     time: "2013-2017",
   },
 ];
-const honors = [
-  "First prize of hackathon in Tesla at 2022.",
-  "Promotion and annual awards in Tesla.",
-];
 const interests = [
   "Traveling",
   "Gourmet food",
@@ -241,8 +257,8 @@ export default function Home() {
           Alan Fang
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-300 mb-2">
-          Senior/Frontend/Full-stack Developer. Focused on AI/LLM and WEB3
-          technology.
+          A boundaryless engineer and a passionate surfer riding the waves of
+          the AI era. 🏄
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
           {skills.map((s) => (
@@ -293,6 +309,23 @@ export default function Home() {
                   <li key={i}>{d}</li>
                 ))}
               </ul>
+              {/* Tesla 奖项和证书图片合并展示 */}
+              {exp.company.includes("Tesla") && (
+                <div className="mt-4 flex flex-col items-center">
+                  <Image
+                    src="/tesla.jpeg"
+                    alt="Tesla Award"
+                    width={350}
+                    height={220}
+                    className="rounded shadow cursor-pointer hover:scale-105 transition"
+                    onClick={() => setModalImg("/tesla.jpeg")}
+                    priority
+                  />
+                  <div className="text-sm text-slate-600 dark:text-slate-300 text-center max-w-xs mt-2">
+                    Annual awards in Tesla.
+                  </div>
+                </div>
+              )}
               {/* 在 CTO 相关经历下方插入 IVA 团队照片 */}
               {exp.company.includes("IVA") && (
                 <div className="mt-4 flex justify-center">
@@ -328,7 +361,7 @@ export default function Home() {
           ))}
         </Section>
         <Section title="Projects">
-          {projects.map((p) => (
+          {projects.map((p, idx) => (
             <div
               key={p.name}
               className="mb-8 p-4 bg-white/80 dark:bg-slate-800 rounded-lg shadow border border-slate-200 dark:border-slate-700"
@@ -337,6 +370,22 @@ export default function Home() {
               <div className="text-slate-700 dark:text-slate-200 mb-2">
                 {p.desc}
               </div>
+              {/* 项目图片展示，支持点击放大 */}
+              {p.images && (
+                <div className="flex flex-wrap gap-4 mb-3">
+                  {p.images.map((img, i) => (
+                    <Image
+                      key={img}
+                      src={img}
+                      alt={p.name + " screenshot " + (i + 1)}
+                      width={220}
+                      height={400}
+                      className="rounded shadow cursor-pointer hover:scale-105 transition"
+                      onClick={() => setModalImg(img)}
+                    />
+                  ))}
+                </div>
+              )}
               <div className="mb-1 font-medium text-slate-600 dark:text-slate-300">
                 Responsibilities:
               </div>
@@ -368,25 +417,6 @@ export default function Home() {
               <span className="text-slate-500 text-sm">{e.time}</span>
             </div>
           ))}
-        </Section>
-        <Section title="Honors & Awards">
-          <ul className="list-disc pl-6">
-            {honors.map((h, i) => (
-              <li key={i}>{h}</li>
-            ))}
-          </ul>
-          {/* Tesla 证书照片始终渲染 */}
-          <div className="mt-6 flex justify-center">
-            <Image
-              src="/tesla.jpeg"
-              alt="Tesla Award"
-              width={350}
-              height={220}
-              className="rounded shadow cursor-pointer hover:scale-105 transition"
-              onClick={() => setModalImg("/tesla.jpeg")}
-              priority
-            />
-          </div>
         </Section>
         <Section title="Interests">
           <div className="flex flex-wrap gap-2">
